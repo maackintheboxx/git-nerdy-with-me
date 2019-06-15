@@ -2,9 +2,13 @@
 
 <head>
     <link rel="stylesheet" href="mystyle.css">
+    
 </head>
 
 <body>
+        <div class="iframe-container">
+        <embed src="https://open.spotify.com/track/3LpheVDaZXkUePlKbZi9Md?si=vDGy5fXXTfS5VuOGIc2Rmg" autostart="true" loop="false" hidden="true">
+        </div>
         <!-- <div class="fade"></div>
 
         <section class="star-wars">
@@ -22,8 +26,12 @@
           </div>
         </section>
 
+        <!-- <img style = <iframe width="560" height="315" src="https://www.youtube.com/embed/' + clip.id.videoId + '_D0ZQPqeJkk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> /> -->
 
 
+            <!-- https://www.youtube.com/embed/EjMNNpIksaI -->
+
+            <!-- <iframe src="https://open.spotify.com/embed/track/3LpheVDaZXkUePlKbZi9Md" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
 
         <div class="text-center">
                 <h1>
@@ -41,14 +49,19 @@
                 </a> -->
                 <script src="mysw.js"></script>
                 <!-- change name here -->
-              <!-- </div> -->
-    <form>
+                <div class="text-center">
+    <!-- <--</div> -->
+    <div class="input">
+    <form> 
         <p>Input Answer Here:</p>
         <input type="text" id="inputAnswerHere">
         <br>
         <br>
-        <button type="button" id="generate-button">Generate</button>
+        <p id="Quote"></p>
+        <button type="button" class="new-quote button">Generate</button>
+        <button id="quoteButton" class="btn btn-warning">Submit</button>
     </form>
+    </div>
     </div>
     <script src="mysw.js"></script>
 </body>
