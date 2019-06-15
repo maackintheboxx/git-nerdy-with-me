@@ -1,5 +1,6 @@
-let input_ia = document.getElementById("inputAnswerHere");
-let submit = document.getElementById("quote-button");
+let newQuote = document.getElementById("newQuote");
+let submit = document.getElementById("submittedAnswer");
+let answer = ""
 
 function checkData(){
     if(this.value === ""){
@@ -15,13 +16,17 @@ function getQuote() {
         .then((resp) => resp.json())
         .then(function(data) {
             let quoteParts = data.starWarsQuote.split(' — ', 2);
-            console.log("this is the quote: ", quoteParts[0]);
-            console.log("this is the source: ", quoteParts[1]);
+            document.getElementById("quote").innerHTML = quoteParts[0];
+            answer = quoteParts[1];
     })
         .catch(function (error) {
         console.log("An error occurred");
     });
 }
 
+function assessAnswer() {
+    console.log("this is the source: ", answer);
+}
 
-getQuote();
+newQuote.addEventListener("click", getQuote);
+submit.addEventListener("click", assessAnswer)
