@@ -25,8 +25,12 @@ function getQuote() {
 }
 
 function assessAnswer() {
-    console.log("this is the source: ", answer);
+    console.log(answer);
+    if (document.getElementById("submittedAnswer").innerHTML === answer) {
+        document.getElementById("answer").innerHTML = "Correct!";
+    }
+    document.getElementById("answer").innerHTML = "Sorry, this quote was said by: "+answer;
 }
 
 newQuote.addEventListener("click", getQuote);
-submit.addEventListener("click", assessAnswer)
+submit.addEventListener("click", assessAnswer);
