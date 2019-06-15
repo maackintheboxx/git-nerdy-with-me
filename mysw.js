@@ -25,8 +25,9 @@ function getQuote() {
 }
 
 function assessAnswer() {
+    console.log(document.getElementById("inputAnswerHere").innerHTML);
     console.log(answer);
-    if (document.getElementById("submittedAnswer").innerHTML === answer) {
+    if (document.getElementById("inputAnswerHere").innerHTML === answer) {
         document.getElementById("answer").innerHTML = "Correct!";
     }
     document.getElementById("answer").innerHTML = "Sorry, this quote was said by: "+answer;
